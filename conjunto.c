@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "conjunto.h"
-#include "ordenacao.h"
+#include "auxiliar.h"
 
 
 struct conjunto *criaConj() {

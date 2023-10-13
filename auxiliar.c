@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "ordenacao.h"
+#include "auxiliar.h"
 
 //troca dois elementos de posição x e y em um vetor
 void trocar(int vetor[], int x, int y) {
