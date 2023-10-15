@@ -3,27 +3,31 @@
 
 int main(){
 	struct conjunto *c = criaConj();
-	if (c) {
-		insereConj(c, 7);
-		imprimeConj(c);
-		insereConj(c, 2);
-		imprimeConj(c);
-		insereConj(c, 6);
-		imprimeConj(c);
-		if (pertenceConj(c, 2))
-			printf("2 pertence ao conjunto!\n");
-		else
-			printf("2 nao pertence ao conjunto!\n");
-		if (pertenceConj(c, 4))
-			printf("4 pertence ao conjunto!\n");
-		else
-			printf("4 nao pertence ao conjunto!\n");
-		removeConj(c, 4);
-		removeConj(c, 2);
-		imprimeConj(c);
+	struct conjunto *c2 = criaConj();
+	if ((c) && (c2)) {
+		
+		int n = 1;
+
+		do {
+			printf("\nOperacoes disponiveis:\n");
+
+
+			printf("Deseja realizar outra operacao? Digite 1 para SIM ou 0 para NAO! ");
+			scanf("%d", &n);
+			printf("\n");
+
+		} while(n != 0);
+
+
+
+
+
+
 		destroiConj(c);
+		destroiConj(c2);
+		
 	} else {
-		printf("Nao foi possivel alocar memoria para o conjunto!\n\n");
+		printf("Nao foi possivel alocar memoria para os conjuntos!\n\n");
 	}
 	return 0;
 }

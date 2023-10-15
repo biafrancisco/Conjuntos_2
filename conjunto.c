@@ -76,15 +76,20 @@ void removeConj(struct conjunto *c, int x) {
 // Retorna conjunto de tamanho alocado máximo tamConj(c1) + tamConj(c2)
 struct conjunto *uniao(struct conjunto *c1, struct conjunto *c2) {
 	struct conjunto *novo = criaConj();
-	for (int i = 0; i < c1->tam; i++) {
-		if (pertenceConj(c2, c1->elementos[i]))
-			insereConj(novo, c1->elementos[i]);
-	}
-
+	for (int i = 0; i < c1->tam; i++) 
+		insereConj(novo, c1->elementos[i]);
+	for (int i = 0; i < c2->tam; i++) 
+		if (!pertenceConj(novo, c2->elementos[i]))
+			insereConj(novo, c2->elementos[i]);
+	return novo;
 }
 
 struct conjunto *intersecao(struct conjunto *c1, struct conjunto *c2) {
-
+	struct conjunto *novo = criaConj();
+	for (int i = 0; i < c1->tam; i++) 
+		if (pertenceConj(c2, c1->elementos[i]))
+			insereConj(novo, c1->elementos[i]);
+	return novo;
 }
 
 void imprimeConj(struct conjunto *c) {
@@ -96,5 +101,5 @@ void imprimeConj(struct conjunto *c) {
 bool conjVazio(struct conjunto *c) {
 	if (tamConj(c) == 0)
 		return true;
-	return false;bool conjVazio(struct conjunto *c);
+	return false;
 }

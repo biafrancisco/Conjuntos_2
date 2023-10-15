@@ -32,7 +32,6 @@ int buscaBinaria(int vetor[], int tam, int valor) {
 //função que insere um elemento no vetor de forma ordenada
 void inserir(int vetor[], int a, int b) {
     int p = busca(vetor, a, b - 1, vetor[b]);
-    printf("busca = %d\n", p);
     int i = b;
     while (i > p + 1) {
         trocar(vetor, i, i - 1);
