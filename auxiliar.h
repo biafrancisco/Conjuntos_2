@@ -1,14 +1,14 @@
+// Arquivo auxiliar.h
+// Define funcoes auxiliares necessarias para a implementacao das funcoes presentes no arquivo conjunto.c
 
-
-
-//troca dois elementos de posição x e y em um vetor
+// Troca dois elementos de posição x e y em um vetor
 void trocar(int vetor[], int x, int y);
 
-//retorna a posicao que um elemento deveria estar num vetor ordenado 
+// Retorna a posicao que um elemento deveria estar num vetor ordenado 
 int busca(int vetor[], int a, int b, int valor);
 
-//busca binaria no vetor
+// Realiza a busca binaria no vetor
 int buscaBinaria(int vetor[], int tam, int valor);
 
-//função que insere um elemento no vetor de forma ordenada
+// Insere o elemento v[b] do vetor de forma ordenada
 void inserir(int vetor[], int a, int b);
