@@ -27,12 +27,12 @@ int buscaBinaria(int vetor[], int tam, int valor) {
     int a = 0;
     int b = tam - 1;
     int result = busca(vetor, a, b, valor);
-    if (vetor[result] == valor)
+    if ((result != -1) && (vetor[result] == valor))
         return result;
     return -1;
 }
 
-// Insere o elemento v[b] do vetor de forma ordenada
+// Ordena o ultimo elemento inserido no vetor (v[b])
 void inserir(int vetor[], int a, int b) {
     int p = busca(vetor, a, b - 1, vetor[b]);
     int i = b;

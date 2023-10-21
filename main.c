@@ -16,7 +16,7 @@ int main(){
 	// Verifica se a memoria para os conjuntos foi alocada com sucesso
 	if ((c1) && (c2)) {
 		
-		int n = 1;
+		int n;
 
 		// Imprime as operacoes disponiveis ao usuario
 		printf("\nOperacoes disponiveis:\n");
@@ -80,14 +80,14 @@ int main(){
 				printf("Realizando a uniao entre os conjuntos...\n");
 				struct conjunto *tmp = uniao(c1, c2);
 				imprimeConj(tmp);
-				free(tmp);
+				destroiConj(tmp);
 				break;
 
 			case 8:
 				printf("Realizando a intersecao entre os conjuntos...\n");
 				struct conjunto *tmp2 = intersecao(c1, c2);
 				imprimeConj(tmp2);
-				free(tmp2);
+				destroiConj(tmp2);
 				break;
 
 			default:

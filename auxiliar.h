@@ -10,5 +10,5 @@ int busca(int vetor[], int a, int b, int valor);
 // Realiza a busca binaria no vetor
 int buscaBinaria(int vetor[], int tam, int valor);
 
-// Insere o elemento v[b] do vetor de forma ordenada
+// Ordena o ultimo elemento inserido no vetor (v[b])
 void inserir(int vetor[], int a, int b);

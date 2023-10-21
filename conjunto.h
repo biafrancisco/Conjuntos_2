@@ -3,13 +3,14 @@
 
 #include <stdbool.h>
 
+// Declaracao da struct que reprsenta um conjunto
 struct conjunto {
 	int tam;
 	int maxTam;
 	int *elementos;
 };
 
-// Aloca memoria para um conjunto, define seu tamanho para 0, aloca memoria para 1 elemento e retorna o endereco desse conjunto
+// Aloca memoria para um conjunto, define seu tamanho para 0, aloca memoria para 1 elemento e retorna o endereco deste conjunto
 struct conjunto *criaConj();
 
 // Libera a memoria alocada para o conjunto e seus elementos
@@ -27,7 +28,7 @@ void insereConj(struct conjunto *c, int x);
 // Remove o elemento x do conjunto C, caso ele pertenca a C
 void removeConj(struct conjunto *c, int x);
 
-// Retorna conjunto de tamanho alocado máximo tamConj(c1) + tamConj(c2)
+// Retorna conjunto uniao de tamanho alocado máximo tamConj(c1) + tamConj(c2)
 struct conjunto *uniao(struct conjunto *c1, struct conjunto *c2);
 
 // Retorna conjunto intersecao
